@@ -16,52 +16,60 @@
             <h2>Add your details to register</h2>
         </header>
         <main>
+            <form action="regConfirm.html">
             <table>
                 <tbody>
                     <tr>
                         <th>Name:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
+                        <td><input autocomplete="off" type="text" placeholder="Enter your full name" minlength="3" pattern="[a-zA-Z]+"  required></td>
                     </tr>
                     <tr>
                         <th>Email:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
+                        <td><input autofocus autocomplete="on" type="email"></td>
                     </tr>
                     <tr>
                         <th>Age:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
+                        <td><input type="number" min="18"></td>
                     </tr>
                     <tr>
                         <th>Birth Day:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
+                        <td><input type="date"></td>
                     </tr>
                     <tr>
                         <th>Gender:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
+                        <td>
+                            <label>
+                                <input type="radio" name="gender">Male
+                                <input type="radio" name="gender">Female
+                            </label>
+                        </td>
                     </tr>
                     <tr>
                         <th>About:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
+                        <td><textarea rows="5" cols="50"></textarea>
                     </tr>
                     <tr>
                         <th>Phone:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
+                        <td><input type="number" minlength="10" maxlength="10"></td>
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Interested in:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
-                    </tr>
-                    <tr>
-                        <th>Attachment:</th>
-                        <td><input type="text" placeholder="Enter your full name"></td>
-                    </tr>
-                    <tr>
-                        <th><input type="submit" value="Register"></th>
-                        <td><input type="submit" value="Register as Admin"</td>
-                    </tr>
-                </tfoot>
+                <tr>
+                    <td><br></td>
+                </tr>
             </table>
+            <label>
+                <strong>Interested in:</strong>
+                <input type="checkbox" name="interest">Friendship
+                <input type="checkbox" name="interest">Dating
+            </label>
+            <label>
+                <strong>Attachment:</strong>
+                <input type="file">
+            </label>
+            <br>
+            <button type="submit">Register</button>
+            <button type="submit" formaction="regConfirmAdmin.html" formnovalidate>Register as Admin</button>
+        </form>
         </main>
     </body>
 </html>
