@@ -5,15 +5,19 @@
         <meta name="author" content="Yash Raj">
         <meta name="description" content="Friendship Zone is a web application, where an individual can 
         connect with his / her friends.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="./css/styler.css">
+		
         <title>Friendship Zone | HomePage</title>
     </head>
-    <body>
-        <header>
-            <img src="./media/friends.PNG" alt="Friends Together" width="280" height="180" />
-            <center><h1>Friendship Zone</h1></center>
-            <h2>A Place to find like minded people...</h2>
+    <body class="container-fluid">
+		<img class="banner" src="./media/friends.PNG" alt="Friends Together" width="280" height="180" />
+        <center><h1>Friendship Zone</h1></center>
+        <header class="jumbotron jumbotron-fluid">
+            <h2 class="display-4">A Place to find like minded people...</h2>
             <dl>
                 <dt><strong>One of the most beautiful qualities of true friendship is to understand 
                     and to be understood.</strong></dt>
@@ -22,28 +26,36 @@
             </dl>
         </header>
         <main>
-            <hr />
-            <ul>
-                <li><a href="friendList.html">Click to Search Friends</a></li>
-                <li>Send mail for your suggestions at <a href="mailto:support@friendshipzone.com">support@friendshipzone.com</a></li>
-            </ul>
-            <hr />
-            <h3>Features of the friendship Zone...</h3>
-            <h4>Friendship</h4>
-            <p>Being part of a friendship Zone site enables you to stay connected with your friends.</p>
-            <h4>Dating</h4>
-            <p>Being part of friendship Zone helps you to meet your companion, your life partner
-                or <i>soul-mate.</i> Exchange your thoughts, indulge in intimate conversations and 
-                interact with opposite sex.
-            </p>
-            <h4>Follow us on:</h4>
-            <ul>
-                <li><a href="https://www.facebook.com">Facebook</a></li>
-                <li><a href="https://www.twitter.com">Twitter</a></li>
-            </ul>
+			<hr class="my-4" />
+			<section class="card mx-auto" id="searchfrnd">	
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item text-center"><a href="friendList.html" class="btn btn-primary">Click to Search Friends</a></li>
+					<li class="list-group-item">Send mail for your suggestions at <a href="mailto:support@friendshipzone.com" class="btn btn-outline-info">support@friendshipzone.com</a></li>
+				</ul>
+			</section>
+			<hr class="my-4" />
+			<section class="jumbotron jumbotron-fluid">
+				<h3 class="display-4">Features of the friendship Zone...</h3>
+				<h4>Friendship</h4>
+				<p class="lead">Being part of a friendship Zone site enables you to stay connected with your friends.</p>
+				<h4>Dating</h4>
+				<p class="lead">Being part of friendship Zone helps you to meet your companion, your life partner
+					or <i>soul-mate.</i> Exchange your thoughts, indulge in intimate conversations and 
+					interact with opposite sex.
+				</p>
+				<h4>Follow us on:</h4>
+				<ul>
+					<li><a href="https://www.facebook.com">Facebook</a></li>
+					<li><a href="https://www.twitter.com">Twitter</a></li>
+				</ul>
+			</section>
         </main>
         <footer>
             <center>&copy; &nbsp;All rights reserved.</center>
         </footer>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html> 
