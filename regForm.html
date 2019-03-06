@@ -5,71 +5,86 @@
         <meta name="author" content="Yash Raj">
         <meta name="description" content="Friendship Zone is a web application, where an individual can 
             connect with his / her friends.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+				
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="./css/styler.css">
+		
         <title>Friendship Zone | Registeration Form</title>
     </head>
-    <body>
+    <body class="container-fluid">
+		<img class="banner"	 src="./media/friends.PNG" alt="Friends Together" width="280" height="180" />
         <header>
-            <img src="./media/friends.PNG" alt="Friends Together" width="280" height="180" />
             <center><h1>Friendship Zone</h1></center>
             <h2>Add your details to register</h2>
         </header>
-        <main>
+        <main class="jumbotron jumbotron-fluid">
             <form action="regConfirm.html">
             <table>
                 <tbody>
                     <tr>
                         <th>Name:</th>
-                        <td><input autocomplete="off" type="text" placeholder="Enter your full name" minlength="3" pattern="[a-zA-Z]+"  required></td>
+                        <td><input class="form-control" autocomplete="off" type="text" placeholder="Enter your full name" minlength="3" pattern="[a-zA-Z]+"  required></td>
                     </tr>
                     <tr>
                         <th>Email:</th>
-                        <td><input autofocus autocomplete="on" type="email"></td>
+                        <td><input class="form-control" autofocus autocomplete="on" type="email"></td>
                     </tr>
                     <tr>
                         <th>Age:</th>
-                        <td><input type="number" min="18"></td>
+                        <td><input class="form-control" type="number" min="18"></td>
                     </tr>
                     <tr>
                         <th>Birth Day:</th>
-                        <td><input type="date"></td>
+                        <td><input class="form-control" type="date"></td>
                     </tr>
                     <tr>
                         <th>Gender:</th>
                         <td>
-                            <label>
-                                <input type="radio" name="gender">Male
-                                <input type="radio" name="gender">Female
+                            <label class="form-check form-check-inline">
+                                Male<input class="form-check-input" type="radio" name="gender">
+                                Female<input class="form-check-input" type="radio" name="gender">
                             </label>
                         </td>
                     </tr>
                     <tr>
                         <th>About:</th>
-                        <td><textarea rows="5" cols="50"></textarea>
+                        <td><textarea class="form-control" rows="5" cols="50"></textarea>
                     </tr>
                     <tr>
                         <th>Phone:</th>
-                        <td><input type="number" minlength="10" maxlength="10"></td>
+                        <td><input class="form-control"	 type="number" minlength="10" maxlength="10"></td>
                     </tr>
                 </tbody>
                 <tr>
                     <td><br></td>
                 </tr>
             </table>
-            <label>
-                <strong>Interested in:</strong>
-                <input type="checkbox" name="interest">Friendship
-                <input type="checkbox" name="interest">Dating
-            </label>
-            <label>
-                <strong>Attachment:</strong>
-                <input type="file">
-            </label>
-            <br>
-            <button type="submit">Register</button>
-            <button type="submit" formaction="regConfirmAdmin.html" formnovalidate>Register as Admin</button>
+			<section>
+				<label class="form-check form-check-inline">
+					<strong>Interested in: &nbsp;</strong>
+					Friendship<input class="form-check-input" type="checkbox" name="interest">
+					Dating<input class="form-check-input" type="checkbox" name="interest">
+				</label>
+				<div class="input-group" id="fileuploader">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroupFileAddon"><strong>Attachment: &nbsp;</strong></span>
+					</div>
+					<div class="custom-file">
+						<input type="file" class="custom-file-input" id="inputGroupFile" aria-describedby="inputGroupFileAddon">
+						<label class="custom-file-label" for="inputGroupFile">Choose file</label>
+					</div>
+				</div>
+				<br>
+				<button class="btn btn-info" type="submit">Register</button>
+				<button class="btn btn-warning" type="submit" formaction="regConfirmAdmin.html" formnovalidate>Register as Admin</button>
+			</section>
         </form>
         </main>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
